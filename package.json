@@ -5,11 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "graphql-gen": "get-graphql-schema http://localhost:4000/graphql > schema.graphql",
+    "relay": "relay-compiler --src ./src --schema ./schema.graphql --extensions js jsx",
     "start": "next start"
   },
   "dependencies": {
     "next": "^10.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react": "^18.0.0-alpha-01be61c12",
+    "react-dom": "^18.0.0-alpha-01be61c12",
+    "react-relay": "^11.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "^11.0.2",
+    "get-graphql-schema": "^2.1.2",
+    "graphql": "^15.5.0",
+    "relay-compiler": "^11.0.2",
+    "relay-config": "^11.0.2"
   }
 }
