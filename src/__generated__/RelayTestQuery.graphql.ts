@@ -1,24 +1,19 @@
-/**
- * @flow
- */
-
+/* tslint:disable */
 /* eslint-disable */
+// @ts-nocheck
 
-'use strict';
+import { ConcreteRequest } from "relay-runtime";
+export type RelayTestQueryVariables = {};
+export type RelayTestQueryResponse = {
+    readonly viewer: {
+        readonly id: string;
+    } | null;
+};
+export type RelayTestQuery = {
+    readonly response: RelayTestQueryResponse;
+    readonly variables: RelayTestQueryVariables;
+};
 
-/*::
-import type { ConcreteRequest } from 'relay-runtime';
-export type RelayTestQueryVariables = {||};
-export type RelayTestQueryResponse = {|
-  +viewer: ?{|
-    +id: string
-  |}
-|};
-export type RelayTestQuery = {|
-  variables: RelayTestQueryVariables,
-  response: RelayTestQueryResponse,
-|};
-*/
 
 
 /*
@@ -29,7 +24,7 @@ query RelayTestQuery {
 }
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "alias": null,
@@ -77,7 +72,5 @@ return {
   }
 };
 })();
-// prettier-ignore
-(node/*: any*/).hash = 'c2e8a77d645ff98f8872847bd91a086b';
-
-module.exports = node;
+(node as any).hash = 'c2e8a77d645ff98f8872847bd91a086b';
+export default node;

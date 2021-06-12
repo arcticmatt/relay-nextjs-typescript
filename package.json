@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "graphql-gen": "get-graphql-schema http://localhost:4000/graphql > schema.graphql",
-    "relay": "relay-compiler --src ./src --schema ./schema.graphql --extensions js jsx",
+    "relay": "relay-compiler --src ./src --schema schema.graphql --language typescript --artifactDirectory ./src/__generated__",
     "start": "next start"
   },
   "dependencies": {
@@ -16,10 +16,15 @@
     "react-relay": "^11.0.2"
   },
   "devDependencies": {
+    "@types/react": "^17.0.11",
+    "@types/react-relay": "^11.0.1",
+    "@types/relay-runtime": "^11.0.0",
     "babel-plugin-relay": "^11.0.2",
     "get-graphql-schema": "^2.1.2",
     "graphql": "^15.5.0",
     "relay-compiler": "^11.0.2",
-    "relay-config": "^11.0.2"
+    "relay-compiler-language-typescript": "^14.0.0",
+    "relay-config": "^11.0.2",
+    "typescript": "^4.3.2"
   }
 }

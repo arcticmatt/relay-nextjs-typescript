@@ -1,4 +1,5 @@
 {
   "presets": ["next/babel"],
-  "plugins": ["relay"]
+  "plugins": [["relay", { "artifactDirectory": "./src/__generated__" }]]
+
 }

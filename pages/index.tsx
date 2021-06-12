@@ -1,7 +1,7 @@
 import RelayEnvironment from "../src/RelayEnvironment";
 import { RelayEnvironmentProvider } from "react-relay";
-import RelayTest from "../src/RelayTest.js";
-import RelayTestDynamic from "../src/RelayTestDynamic.js";
+import RelayTest from "../src/RelayTest";
+import RelayTestDynamic from "../src/RelayTestDynamic";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -12,3 +12,4 @@ export default function Home() {
     </RelayEnvironmentProvider>
   );
 }
+
